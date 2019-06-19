@@ -20,10 +20,10 @@
 # p Taffy3[:brand]
 
 class Taffy
-  def initialize(flavor, price, brand)
-  @flavor = flavor
-  @brand = brand
-  @price = price
+  def initialize(input_options)
+  @flavor = input_options[:flavor]
+  @brand = input_options[:brand]
+  @price = input_options[:price]
   end
 
 attr_reader :flavor
@@ -52,15 +52,20 @@ attr_reader :brand
 
 end
 
-Taffy1 = Taffy.new("watermelon", 2, "Laffy")
 
-p Taffy1
+Taffy1 = Taffy.new(brand: "Laffy", flavor: "watermelon", price: 2,)
 
-Taffy2= Taffy.new("cherry", 2, "Mamas Saltwater")
 
-Taffy3= Taffy.new("lime", 3, "Mamas Saltwater")
+p Taffy1.brand
+# Taffy1 = Taffy.new("watermelon", 2, "Laffy")
 
-p Taffy2.flavor
+# p Taffy1
+
+# Taffy2= Taffy.new("cherry", 2, "Mamas Saltwater")
+
+# Taffy3= Taffy.new("lime", 3, "Mamas Saltwater")
+
+# p Taffy2.flavor
 
 
 
