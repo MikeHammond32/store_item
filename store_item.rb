@@ -26,23 +26,26 @@ class Taffy
   @price = price
   end
 
+attr_reader :flavor
+attr_writer :flavor
 
-  def flavor
-    @flavor
-  end
 
-  def price
-    @price
-  end
+
+attr_reader :price
+  # def price
+  #   @price
+  # end
   
   def set_price=(price)
     @price = input_price
   end
     
 
-  def brand
-  @brand
-  end
+attr_writer :brand
+attr_reader :brand
+  # def brand
+  # @brand
+  # end
 
 
 
@@ -57,5 +60,6 @@ Taffy2= Taffy.new("cherry", 2, "Mamas Saltwater")
 Taffy3= Taffy.new("lime", 3, "Mamas Saltwater")
 
 p Taffy2.flavor
+
 
 
