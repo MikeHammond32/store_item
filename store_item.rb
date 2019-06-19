@@ -42,6 +42,7 @@ attr_reader :price
     
 
 attr_writer :brand
+
 attr_reader :brand
   # def brand
   # @brand
