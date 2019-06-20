@@ -26,12 +26,10 @@ class Taffy
   @price = input_options[:price]
   end
 
-attr_reader :flavor
-attr_writer :flavor
+  attr_reader :flavor
+  attr_writer :flavor
 
-
-
-attr_reader :price
+  attr_reader :price
   # def price
   #   @price
   # end
@@ -52,11 +50,23 @@ attr_reader :brand
 
 end
 
+class Food < Taffy
+  def shelf_life
+    @shelf_life = input_options[:shelf_life]
+  end
+  attr_reader :shelf_life
+  attr_writer :shelf_life
+  
+  
+  end
+end
 
 Taffy1 = Taffy.new(brand: "Laffy", flavor: "watermelon", price: 2,)
 
 
 p Taffy1.brand
+
+
 # Taffy1 = Taffy.new("watermelon", 2, "Laffy")
 
 # p Taffy1
